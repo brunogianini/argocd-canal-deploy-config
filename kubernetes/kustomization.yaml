@@ -9,4 +9,4 @@ namespace: nodeapp
 images:
 - name: imagem
   newName: blgianini/canal-deploy
-  newTag: 257e13cb7227af0d7323b51a810e3ba8dcedb029
+  newTag: 391fe76b3c687b31c59e68db9659044b9c365140
