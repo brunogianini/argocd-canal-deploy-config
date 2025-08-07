@@ -15,16 +15,12 @@ spec:
     spec:
       project: devops
       source:
-        repoURL: https://github.com/andersondario/trivy.git
+        repoURL: https://github.com/brunogianini/argocd-canal-deploy-config.git
         targetRevision: HEAD
-        path: chart
-        helm:
-          valueFiles: 
-            - ../values-common.yaml
-            - ../values-cluster-{{cluster}}.yaml
+        path: ./kubernetes
       destination:
         server: '{{url}}'
-        namespace: trivy
+        namespace: teste
       syncPolicy:
         automated:
           prune: true
