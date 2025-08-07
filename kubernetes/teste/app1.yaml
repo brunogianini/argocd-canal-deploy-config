@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: teste1
   namespace: argocd
 spec:
   project: default
@@ -11,4 +11,4 @@ spec:
     path: ./kubernetes
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: teste
