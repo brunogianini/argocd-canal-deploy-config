@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: minha-app
+  namespace: minha-namespace
+spec:
+  hosts:
+    - minha-app.meudominio.com
+  gateways:
+    - minha-app-gateway
+  http:
+    - route:
+        - destination:
+            host: minha-app
+            port:
+              number: 8080
