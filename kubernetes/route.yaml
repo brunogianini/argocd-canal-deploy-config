@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: minha-app
+  namespace: minha-namespace
+spec:
+  to:
+    kind: Service
+    name: minha-app
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+  host: minha-app.apps.<seu-cluster>.aroapp.io
