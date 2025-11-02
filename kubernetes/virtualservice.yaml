@@ -1,16 +1,17 @@
-apiVersion: networking.istio.io/v1beta1
-kind: VirtualService
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: local-app
+  name: local-app-ingress
   namespace: default
 spec:
-  hosts:
-    - "*"  # aceita qualquer host
-  gateways:
-    - local-gateway
-  http:
-    - route:
-        - destination:
-            host: local-app
-            port:
-              number: 8080
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: local-app
+                port:
+                  number: 8080
