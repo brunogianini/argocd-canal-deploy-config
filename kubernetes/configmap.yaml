@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: minha-config
+  namespace: minha-namespace
+data:
+  APP_ENV: "production"
+  APP_DEBUG: "false"
+  API_URL: "https://api.exemplo.com"
