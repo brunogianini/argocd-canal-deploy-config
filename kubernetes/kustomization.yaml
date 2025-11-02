@@ -4,6 +4,7 @@ resources:
 - deploy.yaml
 - service.yaml
 - configmap.yaml
+- virtualservice.yaml
 
 namespace: nodeapp
 
