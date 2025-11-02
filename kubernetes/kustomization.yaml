@@ -4,7 +4,6 @@ resources:
 - deploy.yaml
 - service.yaml
 - configmap.yaml
-- route.yaml
 
 namespace: nodeapp
 
