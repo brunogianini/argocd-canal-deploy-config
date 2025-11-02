@@ -3,6 +3,9 @@ kind: Kustomization
 resources:
 - deploy.yaml
 - service.yaml
+- configmap.yaml
+- virtualservice.yaml
+- gateway.yaml
 
 namespace: nodeapp
 
